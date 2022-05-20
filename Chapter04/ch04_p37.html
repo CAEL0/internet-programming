@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Media Types</title>
+        <style type="text/css">
+            @media all {
+                body {
+                    background-color: steelblue;
+                }
+                h1 {
+                    font-family: verdana, helvetica, sans-serif;
+                    color: palegreen;
+                }
+                p {
+                    font-size: 12pt;
+                    color: white;
+                    font-family: arial, sans-serif;
+                }
+            }
+            @media print {
+                body {
+                    background-color: white;
+                }
+                h1 {
+                    color: black;
+                }
+                p {
+                    font-size: 14pt;
+                    color: black;
+                    font-family: "times new roman", times, serif;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1>CSS Media Types Example</h1>
+        <p>
+            This example uses CSS media types to vary how the page appears in
+            print. This text will appear in one font on the screen and a
+            different font on paper or in a print preview.
+        </p>
+    </body>
+</html>
