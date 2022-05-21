@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animation</title>
+        <style type="text/css">
+            img {
+                position: relative;
+                animation: movingimage linear 5s 1s 2 alternate;
+            }
+            @keyframes movingimage {
+                0% {
+                    opacity: 0;
+                    left: 150px;
+                    top: 0px;
+                }
+                25% {
+                    opacity: 1;
+                    left: 0px;
+                    top: 150px;
+                }
+                50% {
+                    opacity: 0;
+                    left: 150px;
+                    top: 300px;
+                }
+                75% {
+                    opacity: 1;
+                    left: 300px;
+                    top: 150px;
+                }
+                100% {
+                    opacity: 0;
+                    left: 150px;
+                    top: 0px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <img src="../img/Bam1.jpg" alt="Bam" />
+    </body>
+</html>

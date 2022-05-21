@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Melting Images</title>
+        <style type="text/css">
+            #cover {
+                position: relative;
+                margin: 10px;
+            }
+            #cover img {
+                position: absolute;
+                left: 0;
+                transition: opacity 2s ease-in-out;
+            }
+            #cover img.top:hover {
+                opacity: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="cover">
+            <img src="../img/Bam1.jpg" alt="bam1" class="bottom" width="100%" />
+            <img src="../img/Bam2.jpg" alt="bam2" class="top" width="100%" />
+        </div>
+    </body>
+</html>

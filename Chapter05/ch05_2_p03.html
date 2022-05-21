@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Border</title>
+        <style type="text/css">
+            div         { border: 30px solod;
+                          width: 300px;
+                          padding: 20px;
+                          font-size: larger; }
+            #stretch    { border-image: url(../img/Bam2.jpg);
+                          border-image-slice: 80;
+                          border-image-repeat: stretch; }
+            #repeat     { border-image: url(../img/Bam2.jpg) 34% 34% repeat; }
+        </style>
+    </head>
+    <body>
+        <h2>Image Borders</h2>
+        <img src="../img/Bam1.jpg" alt="image used to demonstrate borders">
+        <p><div id="stretch">Stretching the image border</div></p>
+        <p><div id="repeat">Repeating the image border</div></p>
+    </body>
+</html>
