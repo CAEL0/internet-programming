@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>IF Statements</title>
+        <script>
+            let name = window.prompt("Please enter your name");
+            let now = new Date();
+            let hour = now.getHours();
+
+            if (hour < 12) document.write("<h1>Good Morning, ");
+            else {
+                hour = hour - 12;
+                if (hour < 6) document.write("<h1>Good Afternoon, ");
+                else document.write("<h1>Good Evening, ");
+            }
+            document.writeln(name + ", welcome to JavaScript!</h1>");
+        </script>
+    </head>
+    <body></body>
+</html>
