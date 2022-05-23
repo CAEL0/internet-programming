@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="tmp1"></p>
+        <p id="tmp2"></p>
+        <p id="tmp3"></p>
+        <p id="tmp4"></p>
+        <p id="tmp5"></p>
+        <p id="tmp6"></p>
+        <p id="tmp7"></p>
+        <p id="tmp8"></p>
+        <p id="tmp9"></p>
+        <script>
+            let a = [
+                [1, 2],
+                [3, 4, 5],
+            ];
+            document.getElementById("tmp1").innerHTML = a;
+            document.getElementById("tmp2").innerHTML = a[0];
+            document.getElementById("tmp3").innerHTML = a[1];
+
+            let b = new Array(7);
+            b[1] = new Array(3);
+            document.getElementById("tmp4").innerHTML = b;
+            document.getElementById("tmp5").innerHTML = b[0];
+            document.getElementById("tmp6").innerHTML = b[1];
+
+            let c = new Array([1, 2], [3, 4, 5], [], 8, 9);
+            document.getElementById("tmp7").innerHTML = c;
+            document.getElementById("tmp8").innerHTML = c[1];
+            document.getElementById("tmp9").innerHTML = c[4];
+        </script>
+    </body>
+</html>

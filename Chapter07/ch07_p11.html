@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="tmp1"></p>
+        <p id="tmp2"></p>
+        <p id="tmp3"></p>
+        <p id="tmp4"></p>
+        <p id="tmp5"></p>
+        <p id="tmp6"></p>
+        <script>
+            function tmp1() {
+                return "Hello";
+            }
+            let tmp2 = function () {
+                return "World";
+            };
+            let tmp3 = () => {
+                return "Java";
+            };
+            let tmp4 = () => "Script";
+            let tmp5 = (val) => "Arrow " + val;
+            let tmp6 = (val) => "Powerpoint " + val;
+
+            document.getElementById("tmp1").innerHTML = tmp1();
+            document.getElementById("tmp2").innerHTML = tmp2();
+            document.getElementById("tmp3").innerHTML = tmp3();
+            document.getElementById("tmp4").innerHTML = tmp4();
+            document.getElementById("tmp5").innerHTML = tmp5("Function");
+            document.getElementById("tmp6").innerHTML = tmp6("Presentation");
+        </script>
+    </body>
+</html>

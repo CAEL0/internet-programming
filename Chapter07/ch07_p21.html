@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            table {
+                width: 300px;
+                border-collapse: collapse;
+                background-color: skyblue;
+            }
+            th {
+                background-color: darkblue;
+                color: white;
+                text-align: left;
+                padding: 5px;
+            }
+            td {
+                border: 1px solid black;
+                padding: 3px;
+            }
+        </style>
+        <script>
+            function start() {
+                let integers1 = [2, 4, 6, 8];
+                let integers2 = [2, , , 8];
+
+                outputArray(
+                    "Array integers1 contains",
+                    integers1,
+                    document.getElementById("output1")
+                );
+                outputArray(
+                    "Array integers2 contains",
+                    integers2,
+                    document.getElementById("output2")
+                );
+            }
+            function outputArray(heading, theArray, output) {
+                let content =
+                    "<h2>" +
+                    heading +
+                    "</h2><table><thead><th>Index</th><th>Value</th></thead><tbody>";
+                for (let i = 0; i < theArray.length; i++)
+                    content +=
+                        "<tr><td>" +
+                        i +
+                        "</td><td>" +
+                        theArray[i] +
+                        "</td></tr>";
+
+                content += "</tbody></table>";
+                output.innerHTML = content;
+            }
+            window.addEventListener("load", start, false);
+        </script>
+    </head>
+    <body>
+        <p id="output1"></p>
+        <p id="output2"></p>
+    </body>
+</html>

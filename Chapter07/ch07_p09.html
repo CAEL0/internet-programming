@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="demo"></p>
+        <script>
+            function sum(...args) {
+                let res = 0;
+                for (let arg of args) res += arg;
+                return res;
+            }
+            let x = sum(1, 10, 100, 1000, 10000, 100000, 1000000);
+            document.getElementById("demo").innerHTML = x;
+        </script>
+    </body>
+</html>

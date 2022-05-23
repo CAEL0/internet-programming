@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="tmp1"></p>
+        <p id="tmp2"></p>
+
+        <hr />
+        <p>(join)</p>
+        <p id="tmp3"></p>
+
+        <hr />
+        <p>(pop)</p>
+        <p id="tmp4"></p>
+        <p id="tmp5"></p>
+
+        <hr />
+        <p>(push)</p>
+        <p id="tmp6"></p>
+        <p id="tmp7"></p>
+
+        <hr />
+        <p>(shift)</p>
+        <p id="tmp8"></p>
+        <p id="tmp9"></p>
+
+        <hr />
+        <p>(unshift)</p>
+        <p id="tmp10"></p>
+        <p id="tmp11"></p>
+
+        <hr />
+        <p>(splice)</p>
+        <p id="tmp12"></p>
+        <p id="tmp13"></p>
+
+        <hr />
+        <p>(concat)</p>
+        <p id="tmp14"></p>
+        <p id="tmp15"></p>
+        <p id="tmp16"></p>
+        <p id="tmp17"></p>
+
+        <hr />
+        <p>(slice)</p>
+        <p id="tmp18"></p>
+        <p id="tmp19"></p>
+        <p id="tmp20"></p>
+
+        <hr />
+        <p>(sort)</p>
+        <p id="tmp21"></p>
+        <p id="tmp22"></p>
+        <p id="tmp23"></p>
+        <script>
+            let fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+            document.getElementById("tmp1").innerHTML = fruits.toString();
+            document.getElementById("tmp2").innerHTML = fruits;
+
+            document.getElementById("tmp3").innerHTML = fruits.join("*");
+
+            document.getElementById("tmp4").innerHTML = fruits.pop();
+            document.getElementById("tmp5").innerHTML = fruits;
+
+            document.getElementById("tmp6").innerHTML = fruits.push("Kiwi");
+            document.getElementById("tmp7").innerHTML = fruits;
+
+            document.getElementById("tmp8").innerHTML = fruits.shift();
+            document.getElementById("tmp9").innerHTML = fruits;
+
+            document.getElementById("tmp10").innerHTML =
+                fruits.unshift("Melon");
+            document.getElementById("tmp11").innerHTML = fruits;
+
+            document.getElementById("tmp12").innerHTML = fruits.splice(
+                1,
+                2,
+                "Lemon",
+                "Tomato"
+            );
+            document.getElementById("tmp13").innerHTML = fruits;
+
+            let arr1 = ["Cecilie", "Lone"];
+            let arr2 = ["Emil", "Tobias", "Linus"];
+            let arr3 = ["Robin", "Morgan"];
+            document.getElementById("tmp14").innerHTML = arr1;
+            document.getElementById("tmp15").innerHTML = arr2;
+            document.getElementById("tmp16").innerHTML = arr3;
+            document.getElementById("tmp17").innerHTML = arr1.concat(
+                arr2,
+                arr3
+            );
+
+            document.getElementById("tmp18").innerHTML = fruits;
+            document.getElementById("tmp19").innerHTML = fruits.slice(1);
+            document.getElementById("tmp20").innerHTML = fruits.slice(1, 3);
+
+            document.getElementById("tmp21").innerHTML = fruits.sort();
+            document.getElementById("tmp22").innerHTML = fruits.sort(function (
+                a,
+                b
+            ) {
+                return b.length - a.length;
+            });
+            document.getElementById("tmp23").innerHTML = fruits.reverse();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <button id="tmp1">tmp1</button>
+        <button id="tmp2">tmp2</button>
+        <button id="tmp3">tmp3</button>
+        <script>
+            function init() {
+                document
+                    .getElementById("tmp1")
+                    .addEventListener("click", eventHandler);
+                document
+                    .getElementById("tmp2")
+                    .addEventListener("click", function () {
+                        console.log("tmp2: this === " + this);
+                        console.log(this);
+                    });
+                document
+                    .getElementById("tmp3")
+                    .addEventListener("click", () => {
+                        console.log("tmp3: this === " + this);
+                        console.log(this);
+                    });
+            }
+            function eventHandler() {
+                console.log("tmp1: this === " + this);
+                console.log(this);
+            }
+            init();
+        </script>
+    </body>
+</html>

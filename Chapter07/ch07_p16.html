@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="tmp1"></p>
+        <p id="tmp2"></p>
+        <p id="tmp3"></p>
+        <p id="tmp4"></p>
+        <script>
+            let cars1 = ["Saab", "Volvo", "BMW"];
+            let cars2 = new Array("Saab", "Volvo", "BMW");
+
+            document.getElementById("tmp1").innerHTML = cars1;
+            document.getElementById("tmp2").innerHTML = cars2;
+
+            cars1[0] = "Opel";
+            document.getElementById("tmp3").innerHTML = cars1;
+
+            cars1[10] = "Lincoln";
+            delete cars1[1];
+            document.getElementById("tmp4").innerHTML = cars1;
+        </script>
+    </body>
+</html>

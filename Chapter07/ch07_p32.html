@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <hr />
+        <p>(forEach)</p>
+        <p id="tmp1"></p>
+
+        <hr />
+        <p>(map)</p>
+        <p id="tmp2"></p>
+
+        <hr />
+        <p>(filter)</p>
+        <p id="tmp3"></p>
+
+        <hr />
+        <p>(reduce)</p>
+        <p id="tmp4"></p>
+
+        <hr />
+        <p>(every)</p>
+        <p id="tmp5"></p>
+
+        <hr />
+        <p>(some)</p>
+        <p id="tmp6"></p>
+
+        <hr />
+        <p>(indexOf)</p>
+        <p id="tmp7"></p>
+        <p id="tmp8"></p>
+
+        <hr />
+        <p>(lastIndexOf)</p>
+        <p id="tmp9"></p>
+
+        <hr />
+        <p>(find)</p>
+        <p id="tmp10"></p>
+        <p id="tmp11"></p>
+
+        <hr />
+        <p>(findIndex)</p>
+        <p id="tmp12"></p>
+        <p id="tmp13"></p>
+        <script>
+            const numbers1 = [45, 4, 9, 16, 25];
+            const numbers2 = [25, 47, 35, 25, 35];
+            let txt = "";
+
+            numbers1.forEach(myFunction1);
+            document.getElementById("tmp1").innerHTML = txt;
+            document.getElementById("tmp2").innerHTML =
+                numbers1.map(myFunction2);
+            document.getElementById("tmp3").innerHTML =
+                numbers1.filter(myFunction3);
+            document.getElementById("tmp4").innerHTML =
+                numbers1.reduce(myFunction4);
+            document.getElementById("tmp5").innerHTML =
+                numbers1.every(myFunction3);
+            document.getElementById("tmp6").innerHTML =
+                numbers1.some(myFunction3);
+            document.getElementById("tmp7").innerHTML = numbers2.indexOf(9);
+            document.getElementById("tmp8").innerHTML = numbers2.indexOf(35);
+            document.getElementById("tmp9").innerHTML =
+                numbers2.lastIndexOf(25);
+            document.getElementById("tmp10").innerHTML =
+                numbers2.find(myFunction3);
+            document.getElementById("tmp11").innerHTML =
+                numbers2.find(myFunction5);
+            document.getElementById("tmp12").innerHTML =
+                numbers2.findIndex(myFunction3);
+            document.getElementById("tmp13").innerHTML =
+                numbers2.findIndex(myFunction5);
+
+            function myFunction1(value, index, array) {
+                txt += value + " " + index + " " + array + "<br>";
+            }
+            function myFunction2(value, index, array) {
+                return value * 2;
+            }
+            function myFunction3(value, index, array) {
+                return value > 18;
+            }
+            function myFunction4(total, value, index, array) {
+                return total + value;
+            }
+            function myFunction5(value, index, array) {
+                return value > 50;
+            }
+        </script>
+    </body>
+</html>
