@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="tmp1"></p>
+        <p id="tmp2"></p>
+        <p id="tmp3"></p>
+        <p id="tmp4"></p>
+        <p id="tmp5"></p>
+        <script>
+            let person = {
+                firstName: "John",
+                lastName: "Doe",
+                id: 5566,
+                fullName: function () {
+                    return this.firstName + " " + this.lastName;
+                },
+            };
+            document.getElementById("tmp1").innerHTML = person.firstName;
+            document.getElementById("tmp2").innerHTML = person.fullName();
+
+            person.age = 24;
+            document.getElementById("tmp3").innerHTML = person["age"];
+
+            person["sex"] = "male";
+            document.getElementById("tmp4").innerHTML = person.sex;
+
+            delete person.sex;
+            document.getElementById("tmp4").innerHTML = person.sex;
+        </script>
+    </body>
+</html>

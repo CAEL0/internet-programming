@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="tmp"></p>
+        <script>
+            let x = 9.656;
+            document.getElementById("tmp").innerHTML +=
+                "x" +
+                "<br>x.toFixed(0): " +
+                x.toFixed(0) +
+                "<br>x.toFixed(2): " +
+                x.toFixed(2) +
+                "<br>x.toFixed(4): " +
+                x.toFixed(4) +
+                "<br>x.toFixed(6): " +
+                x.toFixed(6) +
+                "<br>x.toPrecision(): " +
+                x.toPrecision() +
+                "<br>x.toPrecision(2): " +
+                x.toPrecision(2) +
+                "<br>x.toPrecision(4): " +
+                x.toPrecision(4) +
+                "<br>x.toPrecision(6): " +
+                x.toPrecision(6);
+        </script>
+    </body>
+</html>

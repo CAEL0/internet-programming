@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <h2>Use the XMLHttpRequest to get the content of a file.</h2>
+        <p>The content is written in JSON format.</p>
+        <p id="demo"></p>
+        <script>
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var myObj = JSON.parse(this.responseText);
+                    document.getElementById("demo").innerHTML = myObj.name;
+                }
+            };
+            xmlhttp.open(
+                "GET",
+                "https://jsonplaceholder.typicode.com/users/1",
+                true
+            );
+            xmlhttp.send();
+        </script>
+        <p>
+            Look at
+            <a
+                href="https://jsonplaceholder.typicode.com/users/1"
+                target="_blank"
+                >json_data</a
+            >
+        </p>
+    </body>
+</html>

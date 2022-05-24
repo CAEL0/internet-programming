@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Using the Window Object</title>
+        <script src="window.js"></script>
+    </head>
+    <body>
+        <h1>Hello, this is the main window</h1>
+        <p>
+            Please check the features to enable for the child window<br />
+            <input
+                type="checkbox"
+                id="toolBarCheckBox"
+                value=""
+                checked="checked"
+            /><label>Tool Bar</label>
+            <input
+                type="checkbox"
+                id="menuBarCheckBox"
+                value=""
+                checked="checked"
+            /><label>Menu Bar</label>
+            <input
+                type="checkbox"
+                id="locationCheckBox"
+                value=""
+                checked="checked"
+            /><label>Address Bar</label>
+            <input
+                type="checkbox"
+                id="scrollBarsCheckBox"
+                value=""
+                checked="checked"
+            /><label>Scroll Bars</label>
+            <input
+                type="checkbox"
+                id="statusCheckBox"
+                value=""
+                checked="checked"
+            /><label>Status Bar</label>
+            <input
+                type="checkbox"
+                id="resizableCheckBox"
+                value=""
+                checked="checked"
+            /><label>Resizable</label>
+        </p>
+        <p>
+            Please enter the text that you would like to display in the child
+            window<br />
+            <input
+                type="text"
+                id="textForChild"
+                value="<h1>Hello, I am a child window</h1><br>"
+            />
+            <input
+                type="button"
+                id="createButton"
+                value="Create Child Window"
+                onclick="createChildWindow()"
+            />
+            <input
+                type="button"
+                id="modifyButton"
+                value="Modify Child Window"
+                onclick="modifyChildWindow()"
+                disabled="disabled"
+            />
+            <input
+                type="button"
+                id="closeButton"
+                value="Close Child Window"
+                onclick="closeChildWindow()"
+                disabled="disabled"
+            />
+        </p>
+        <p>
+            The child window's URL is: <br />
+            <input type="text" id="myChildURL" value="http://" />
+            <input
+                type="button"
+                id="setURLButton"
+                value="Set Child URL"
+                onclick="setChildWindowURL()"
+                disabled="disabled"
+            />
+        </p>
+    </body>
+</html>

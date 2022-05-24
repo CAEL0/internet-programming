@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="tmp"></p>
+        <script>
+            let x = "John";
+            let y = new String("John");
+            let z = new String("John");
+
+            document.getElementById("tmp").innerHTML +=
+                "x == y : " +
+                (x == y) +
+                "<br>" +
+                "x === y : " +
+                (x === y) +
+                "<br>" +
+                "y == z : " +
+                (y == z) +
+                "<br>" +
+                "y === z : " +
+                (y === z) +
+                "<br>";
+        </script>
+    </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="tmp"></p>
+        <script>
+            myObj1 = {
+                name: "John",
+                age: 30,
+                cars: {
+                    car1: "Ford",
+                    car2: "BMW",
+                    car3: "Fiat",
+                    car4: "Lincoln",
+                },
+            };
+            myObj2 = {
+                name: "John",
+                age: 30,
+                cars: ["Ford", "BMW", "Fiat", "Lincoln"],
+            };
+            document.getElementById("tmp").innerHTML =
+                myObj1.cars.car1 +
+                "<br>" +
+                myObj1.cars["car2"] +
+                "<br>" +
+                myObj1["cars"].car3 +
+                "<br>" +
+                myObj1["cars"]["car4"] +
+                "<br><br>";
+
+            for (i in myObj2.cars) {
+                document.getElementById("tmp").innerHTML +=
+                    myObj2.cars[i] + "<br>";
+            }
+        </script>
+    </body>
+</html>

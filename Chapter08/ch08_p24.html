@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="tmp"></p>
+        <script>
+            let str1 = "Give 100%";
+            let x = str1.match(/\d/g);
+
+            document.getElementById("tmp").innerHTML = x + "<br>";
+
+            let str2 = "I have 428 dollars, but I need 500";
+            let y = str2.match(/(\d+) ([^\d]+) (\d+)/);
+            document.getElementById("tmp").innerHTML += y;
+        </script>
+    </body>
+</html>

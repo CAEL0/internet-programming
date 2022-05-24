@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="tmp1"></p>
+        <p id="tmp2"></p>
+        <script>
+            function Person(first, last, age, eye) {
+                this.firstName = first;
+                this.lastName = last;
+                this.age = age;
+                this.eyeColor = eye;
+            }
+            let myFather = new Person("John", "Doe", 50, "blue");
+            let myMother = new Person("Sally", "Rally", 48, "green");
+
+            document.getElementById("tmp1").innerHTML = myFather.firstName;
+            document.getElementById("tmp2").innerHTML = myMother.eyeColor;
+        </script>
+    </body>
+</html>

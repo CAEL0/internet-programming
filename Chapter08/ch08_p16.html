@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="tmp"></p>
+        <script>
+            let str = "Apple, Banana, Kiwi";
+
+            document.getElementById("tmp").innerHTML +=
+                "slice(7) : " +
+                str.slice(7) +
+                "<br>" +
+                "slice(7, 13) : " +
+                str.slice(7, 13) +
+                "<br>" +
+                "slice(-12, -6) : " +
+                str.slice(-12, -6) +
+                "<br>" +
+                "substring(7) : " +
+                str.substring(7) +
+                "<br>" +
+                "substring(7, 13) : " +
+                str.substring(7, 13) +
+                "<br>" +
+                "substring(-12, -6) : " +
+                str.substring(-12, -6) +
+                "<br>" +
+                "substr(7) : " +
+                str.substr(7) +
+                "<br>" +
+                "substr(7, 6) : " +
+                str.substr(7, 6) +
+                "<br>";
+        </script>
+    </body>
+</html>

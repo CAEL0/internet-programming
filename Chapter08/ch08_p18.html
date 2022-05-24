@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="tmp"></p>
+        <script>
+            let str = "Please visit Yonsei and Yonsei!";
+            let str1 = str.replace("Yonsei", "Yonsei University");
+            let str2 = str.replace(/Yonsei/g, "Yonsei University");
+
+            document.getElementById("tmp").innerHTML +=
+                "str : " +
+                str +
+                "<br>" +
+                "replace1 : " +
+                str1 +
+                "<br>" +
+                "replace2 : " +
+                str2 +
+                "<br>";
+        </script>
+    </body>
+</html>

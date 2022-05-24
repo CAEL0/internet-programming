@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="tmp"></p>
+        <script>
+            let txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            document.getElementById("tmp").innerHTML +=
+                "txt : " +
+                txt +
+                "<br>" +
+                "length of txt : " +
+                txt.length +
+                "<br>";
+
+            let str = "Please locate where 'locate' occurs!";
+            let pos = str.search("locate");
+            document.getElementById("tmp").innerHTML +=
+                "str : " + str + "<br>" + "pos of locate : " + pos;
+        </script>
+    </body>
+</html>
