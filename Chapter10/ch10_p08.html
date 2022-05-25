@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <p id="demo">
+            has extra spacing and contains <span>a span element</span>.
+        </p>
+        <p id="tmp1"></p>
+        <p id="tmp2"></p>
+        <p id="tmp3"></p>
+        <script>
+            const demo = document.getElementById("demo");
+            document.getElementById("tmp1").innerText =
+                "innerText: " + demo.innerText;
+            document.getElementById("tmp2").innerText =
+                "innerHTML: " + demo.innerHTML;
+            document.getElementById("tmp3").innerText =
+                "textContent: " + demo.textContent;
+        </script>
+    </body>
+</html>

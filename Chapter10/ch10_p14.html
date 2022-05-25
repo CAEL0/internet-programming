@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Basic DOM Functionality</title>
+        <script src="dom.js"></script>
+        <style>
+            h1,
+            h3 {
+                text-align: center;
+                font-family: tahoma, geneva, sans-serif;
+            }
+            p {
+                margin-left: 5%;
+                margin-right: 5%;
+                font-family: arial, helvetica, sans-serif;
+            }
+            ul {
+                margin-left: 10%;
+            }
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            .nav {
+                width: 100%;
+                border-top: 3px dashed blue;
+                padding-top: 10px;
+            }
+            .highlighted {
+                background-color: yellow;
+            }
+            input {
+                width: 150px;
+            }
+            form > p {
+                margin: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="heading1" class="highlighted">
+            [heading1] Document Object Model
+        </h1>
+        <h3 id="heading2">[heading2] Element Functionality</h3>
+        <p id="para1">
+            [para1] The Document Object Model (DOM) allows for quick, dynamic
+            access to all elements in an HTML5 document for manipulation with
+            JavaScript.
+        </p>
+        <p id="para2">
+            [para2] For more information, check out the "HTML DOM" section of
+            w3school's
+            <a href="https://www.w3schools.com/js/js_htmldom.asp" id="link"
+                >[link] HTML DOM.</a
+            >
+        </p>
+        <p id="para3">[para3] The buttonns below demonstrate:(list)</p>
+        <ul id="list">
+            <li id="item1">[item1] getElementById and parentNode</li>
+            <li id="item2">[item2] insertBefore and appendChild</li>
+            <li id="item3">[item3] replaceChild and removeChild</li>
+        </ul>
+        <div id="nav" class="nav">
+            <form action="#">
+                <p>
+                    <input type="text" id="gbi" value="heading1" />
+                    <input type="button" id="byIdButton" value="ID 선택" />
+                </p>
+                <p>
+                    <input type="text" id="ins" />
+                    <input type="button" id="insertButton" value="노드 추가" />
+                </p>
+                <p>
+                    <input type="text" id="append" />
+                    <input type="button" id="appendButton" value="자식 추가" />
+                </p>
+                <p>
+                    <input type="text" id="replace" />
+                    <input type="button" id="replaceButton" value="노드 대체" />
+                </p>
+                <p>
+                    <input type="button" value="노드 삭제" id="removeButton" />
+                </p>
+                <p>
+                    <input
+                        type="button"
+                        value="부모 노드 선택"
+                        id="parentButton"
+                    />
+                </p>
+            </form>
+        </div>
+    </body>
+</html>
