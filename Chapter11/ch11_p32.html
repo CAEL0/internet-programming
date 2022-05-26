@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>scroll the window</title>
+        <script>
+            window.onscroll = () => {
+                if (
+                    window.innerHeight + window.scrollY >=
+                    document.body.offsetHeight
+                )
+                    document.querySelector("body").style.background = "blue";
+                else document.querySelector("body").style.background = "white";
+            };
+            window.addEventListener("load", () => {
+                for (let i = 1; i < 31; i++) {
+                    let node = document.createElement("p");
+                    node.innerText = i;
+                    document.body.appendChild(node);
+                }
+            });
+        </script>
+    </head>
+    <body></body>
+</html>

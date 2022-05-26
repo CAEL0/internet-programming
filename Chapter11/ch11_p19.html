@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Simple Drawing Program</title>
+        <style>
+            #canvas {
+                border: black 2px solid;
+            }
+            .bluetext {
+                color: blue;
+            }
+            .redtext {
+                color: red;
+            }
+            .blue {
+                background-color: blue;
+            }
+            .red {
+                background-color: red;
+            }
+        </style>
+        <script>
+            function createCanvas() {
+                let side = 100;
+                let tbody = document.getElementById("tablebody");
+                for (let i = 0; i < side; i++) {
+                    let row = document.createElement("tr");
+                    for (let j = 0; j < side; j++) {
+                        let cell = document.createElement("td");
+                        row.appendChild(cell);
+                    }
+                    tbody.appendChild(row);
+                }
+                document
+                    .getElementById("canvas")
+                    .addEventListener("mousemove", processMouseMove, false);
+            }
+            function processMouseMove(e) {
+                if (e.target.tagName.toLowerCase() == "td") {
+                    if (e.ctrlKey) e.target.setAttribute("class", "blue");
+                    if (e.shiftKey) e.target.setAttribute("class", "red");
+                }
+            }
+            window.addEventListener("load", createCanvas, false);
+        </script>
+    </head>
+    <body>
+        <table id="canvas">
+            <caption>
+                Hold
+                <strong>Ctrl</strong>
+                to draw in
+                <span class="bluetext">blue</span
+                ><br />
+                Hold
+                <strong>Shift</strong>
+                to draw in
+                <span class="redtext">red</span>
+            </caption>
+            <tbody id="tablebody"></tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                document.querySelectorAll("button").forEach(function (button) {
+                    button.onclick = function () {
+                        document.querySelector("#hello").style.color =
+                            button.dataset.color;
+                    };
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1 id="hello">안녕하세요!</h1>
+        <button data-color="red">빨간색</button>
+        <button data-color="yellow">노란색</button>
+        <button data-color="green">초록색</button>
+        <button data-color="blue">파란색</button>
+        <button data-color="purple">보라색</button>
+    </body>
+</html>
