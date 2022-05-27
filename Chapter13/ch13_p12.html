@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>환율 변환</title>
+        <script>
+            var myHeaders = new Headers();
+            myHeaders.append("apikey", "k1FVYEL6fLQ5gBJfAs2L5vOLr7qXy1Lp");
+
+            var requestOptions = {
+                method: "GET",
+                redirect: "follow",
+                headers: myHeaders,
+            };
+            document.addEventListener("DOMContentLoaded", function () {
+                document.querySelector("form").onsubmit = function () {
+                    fetch(
+                        "http://api.apilayer.com/exchangerates_data/convert?to=KRW&from=EUR&amount=1",
+                        requestOptions
+                    )
+                        .then((response) => response.json())
+                        .then((data) => {
+                            const rate = data.result;
+                            document.querySelector(
+                                "h1"
+                            ).innerHTML = `1 EUR is equal to ${rate.toFixed(
+                                3
+                            )} KRW.`;
+                        })
+                        .catch((error) => {
+                            console.log("Error:", error);
+                        });
+                    return false;
+                };
+            });
+        </script>
+    </head>
+    <body>
+        <h1></h1>
+        <form><input type="submit" value="환율 계산" /></form>
+    </body>
+</html>

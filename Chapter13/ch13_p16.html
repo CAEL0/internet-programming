@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Infinite Scroll</title>
+        <style>
+            .post {
+                background-color: #b5d692;
+                padding: 20px;
+                margin: 10px;
+            }
+            body {
+                padding-bottom: 50px;
+            }
+        </style>
+        <script>
+            let counter = 1;
+            document.addEventListener("DOMContentLoaded", load);
+            window.onscroll = () => {
+                if (
+                    window.innerHeight + window.scrollY >=
+                    document.body.offsetHeight
+                )
+                    load();
+            };
+            function load() {
+                const start = counter;
+                const end = start + 1;
+                counter += 2;
+                fetch(
+                    `https://jsonplaceholder.typicode.com/comments?postId=${start}&postId=%{end}`
+                )
+                    .then((response) => response.json())
+                    .then((posts) => {
+                        posts.forEach(add_post);
+                    });
+            }
+            function add_post(comments) {
+                const post = document.createElement("div");
+                post.className = "post";
+                post.innerHTML = comments.body;
+                document.querySelector("#posts").append(post);
+            }
+        </script>
+    </head>
+    <body>
+        <div id="posts"></div>
+    </body>
+</html>
