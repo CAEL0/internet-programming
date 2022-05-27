@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h2>Use the XMLHttpRequest to get the content of a file.</h2>
+        <p>The content is written in JSON format.</p>
+        <p id="demo"></p>
+        <button id="AjaxButton" type="button">Make a request</button>
+        <script>
+            (function () {
+                var httpRequest;
+                document
+                    .getElementById("AjaxButton")
+                    .addEventListener("click", makeRequest);
+                function makeRequest() {
+                    httpRequest = new XMLHttpRequest();
+                    if (!httpRequest) {
+                        alert("Cannot create an XMLHTTP instance");
+                        return false;
+                    }
+                    httpRequest.onreadystatechange = displayContents;
+                    httpRequest.open(
+                        "GET",
+                        "https://jsonplaceholder.typicode.com/users/1"
+                    );
+                    httpRequest.setRequestHeader("Cache-Control", "no-cache");
+                    httpRequest.send();
+                }
+                function displayContents() {
+                    if (httpRequest.readyState === XMLHttpRequest.DONE) {
+                        if (httpRequest.status === 200) {
+                            var myObj = JSON.parse(httpRequest.responseText);
+                            document.getElementById("demo").innerHTML =
+                                "Name: " + myObj.name;
+                        } else alert("There was a problem with the request.");
+                    }
+                }
+            })();
+        </script>
+        <p>
+            Look at
+            <a
+                href="https://jsonplaceholder.typicode.com/users/1"
+                target="_blank"
+                >json_data</a
+            >
+        </p>
+    </body>
+</html>
